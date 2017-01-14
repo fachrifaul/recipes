@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">Pagination</string>
+    <string name="app_name">Recipe Book Pancake</string>
+
     <string name="my_api_key">ec01f8c2eb6ac402f2ca026dc2d9b8fd</string>
+    <string name="recipe_api_key">0dcb0b0a34bf6063bc198b1175b8c7cf</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-7409622792081859/9057909955</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-7409622792081859/6464370352</string>
+
     <string name="error_msg">Sorry! Couldn\'t fetch movies.</string>
     <string name="btn_retry">Retry</string>
     <string name="error_msg_no_internet">Not connected to internet</string>

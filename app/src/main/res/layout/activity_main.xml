@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.suleiman.pagination.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_recycler"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="@dimen/activity_margin_content"
-        android:paddingTop="@dimen/activity_margin_content"/>
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/app_name"
+                app:titleTextColor="@android:color/white"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/adView"
+            android:layout_below="@+id/appBar"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/activity_margin_content"
+            android:paddingTop="@dimen/activity_margin_content"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id"/>
+
+    </RelativeLayout>
 
     <ProgressBar
         android:id="@+id/main_progress"
